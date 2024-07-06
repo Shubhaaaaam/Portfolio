@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            font-size: small;
+            background-color: #f4f4f4;
+            color: #ffffff;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        p{
+            font-weight: bold;
+        }
+        
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        
+        header h1 {
+            margin: 0;
+        }
+
+        section {
+            padding: 2rem;
+            margin: 2rem auto;
+            max-width: 800px;
+            background-color: #000000;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s, color 0.3s;
+            border-radius: 5px;
+        }
+        .sec {
+            padding: 1rem;
+            margin: 2rem auto;
+            width: 200px;
+            text-align: center;
+            align-items: justify;
+            background-color: #fff;
+            border-radius: 15px;
+            color: #000;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .sec:hover{
+            background-color: #000;
+            color: #fff;
+            scale: 1.15;
+            transition: background-color 0.5s, color 0.05s;
+        }
+        header nav {
+            flex: 1;
+            text-align: right;
+        }
+        
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        nav ul li {
+            display: inline;
+            margin: 0 1rem;
+        }
+        
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        nav ul li a:hover {
+            color: #ff6347;
+        }
+        
+        .social-button {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            margin-top: 1rem;
+            background-color: #000;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        
+        .social-button svg {
+            height: 12px;
+            width: 12px;
+            margin-right: 8px;
+            vertical-align: middle;
+        }
+        
+        .social-button:hover {
+            background-color: #444;
+        }
+        
+        .dark-mode .social-button {
+            background-color: #121212;
+            color: #fff;
+        }
+        
+        .dark-mode .social-button:hover {
+            background-color: #333;
+        }
+        
+        header img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid #fff;
+            margin-left: 1rem;
+        }
+        
+        #theme-toggle {
+            border: none;
+            padding: 0.5rem 1rem;
+            cursor: pointer;
+            background-color: #fff;
+            color: #000;
+            border-radius: 5px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        
+        #theme-toggle:hover {
+            background-color: #000;
+            color: #fff;
+        }
+
+        .project{
+            display: flex;
+            padding: auto;
+            margin: auto;
+            justify-content: space-between;
+        }
+        .project{
+            display: flex;
+            padding: auto;
+            margin: auto;
+            justify-content: space-between;
+        }
+        
+        body.dark-mode {
+            background-color: #000;
+            color: #ffffff;
+        }
+        
+        header.dark-mode {
+            background-color: #000;
+            color: #fff;
+        }
+        
+        nav ul li a.dark-mode {
+            color: #fff;
+        }
+        
+        .github-button.dark-mode {
+            background-color: #000;
+        }
+        
+        .github-button.dark-mode:hover {
+            background-color: #000;
+        }
+        
+        #theme-toggle.dark-mode {
+            background-color: #000;
+            color: #fff;
+        }
+        
+        #theme-toggle.dark-mode:hover {
+            background-color: #fff;
+            color: #fff;
+        }
+        footer {
+            text-align: center;
+            padding: 1px;
+            background-color: #000;
+            color: #fff;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .linkedin-button {
+            background-color: #0077b5;
+        }
+
+        .linkedin-button:hover {
+            background-color: #2aa4e6;
+        }
+
+        .instagram-button {
+            background-color: #e1306c;
+        }
+
+        .instagram-button:hover {
+            background-color: #e73473;
+        }
+
+        .gmail-button {
+            background-color: #d14836;
+        }
+
+        .gmail-button:hover {
+            background-color: #c45349;
+        }
+        .whatsapp-button {
+            background-color: #128512;
+        }
+
+        .whatsapp-button:hover {
+            background-color: #26b313;
+        }
+        .facebook-button {
+            background-color: #1829c0;
+        }
+
+        .facebook-button:hover {
+            background-color: #3e41d4;
+        }
+        .codechef-button {
+            background-color: #964814;
+        }
+
+        .codechef-button:hover {
+            background-color: #cc7e25;
+        }
+        .github-button {
+            background-color: #555454;
+        }
+
+        .github-button:hover {
+            background-color: #777674;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Shubham</h1>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <button id="theme-toggle">Theme</button>
+        <img src="C:\Users\shubh\Desktop\Portfolio\c.jpg" alt="Your Photo">
+    </header>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <p>Hello I'm Shubham.</p>
+        <p>I'm a programmer who likes to cook new application and websites.</p>
+        <p>Currently in learning process and trying to develop my skills every day.</p>
+    </section>
+
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="project">
+            <div class="sec">
+                <h3>HOS-AI</h3>
+            </div>
+            <div class="sec">
+                <h3>Blog-Website</h3>
+            </div>
+            <div class="sec">
+                <h3>Railway Management System</h3>
+            </div>
+        </div>
+        <div class="project">
+            <div class="sec" id="sec">
+                <h3>Portfolio</h3>
+            </div>
+            <div class="sec">
+                <h3>CSBS</h3>
+            </div>
+            <div class="sec">
+                <h3>Railway Management System Website</h3>
+            </div>
+        </div>
+    </section>
+    
+    <section id="contact">
+        <h2>Contact</h2>
+        <div style="padding: 0 15px ;" >
+        <a href="https://www.linkedin.com/in/shubhaaaaam" class="social-button linkedin-button">
+            <svg height="12" aria-hidden="true" viewBox="0 0 16 16" version="1.1" width="12" class="bi bi-linkedin" fill="currentColor">
+                <path fill-rule="evenodd" d="M.5 1a.5.5 0 0 1 .5.5v13a.5.5 0 0 1-.5.5h15a.5.5 0 0 1-.5-.5V1.5a.5.5 0 0 1 .5-.5h-15zM5 13H3V6h2v7zm-.5-8.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3zm8.793 7.707a3.5 3.5 0 0 0-2.457-2.457v-.566a.75.75 0 0 0-.75-.75h-1.5a.75.75 0 0 0-.75.75v4.566a.75.75 0 0 0 .75.75h1.5a.75.75 0 0 0 .75-.75v-2.55c0-.517.16-.843.519-1.159.355-.313.862-.491 1.481-.491 1.094 0 1.801.694 1.801 1.75v2.45a.75.75 0 0 0 .75.75h1.5a.75.75 0 0 0 .75-.75v-2.988a3.505 3.505 0 0 0-2.793-3.434z"/>
+            </svg>
+            LinkedIn
+        </a>
+        <a href="https://www.instagram.com/_shubham_400_" class="social-button instagram-button">
+            <svg height="12" aria-hidden="true" viewBox="0 0 16 16" version="1.1" width="12" class="bi bi-instagram" fill="currentColor">
+                <path fill-rule="evenodd" d="M8 1.5a6.5 6.5 0 0 1 4.619 1.906 6.5 6.5 0 0 1 1.906 4.619 6.5 6.5 0 0 1-1.906 4.619A6.5 6.5 0 0 1 8 14.5a6.5 6.5 0 0 1-4.619-1.906A6.5 6.5 0 0 1 1.475 8 6.5 6.5 0 0 1 3.381 3.381 6.5 6.5 0 0 1 8 1.5zm0 1.69a4.81 4.81 0 0 0-3.406 1.406 4.81 4.81 0 0 0-1.406 3.406 4.81 4.81 0 0 0 1.406 3.406 4.81 4.81 0 0 0 3.406 1.406 4.81 4.81 0 0 0 3.406-1.406 4.81 4.81 0 0 0 1.406-3.406 4.81 4.81 0 0 0-1.406-3.406A4.81 4.81 0 0 0 8 3.19zm4.159 2.82a.75.75 0 0 1 0 1.06.75.75 0 0 1-1.06 0 .75.75 0 0 1 0-1.06.75.75 0 0 1 1.06 0zM8 6.685a1.315 1.315 0 1 1 0 2.63 1.315 1.315 0 0 1 0-2.63zm5.135 6.366a.25.25 0 0 1-.25.25H3.115a.25.25 0 0 1-.25-.25v-5.57h1.695a4.206 4.206 0 0 0-.147 1.122c0 2.62 2.13 4.75 4.75 4.75s4.75-2.13 4.75-4.75c0-.39-.048-.768-.147-1.122h1.696v5.57z"/>
+            </svg>
+            Instagram
+        </a>
+        <a href="mailto:shubhamsaha400@gmail.com" class="social-button gmail-button">
+            <svg height="12" aria-hidden="true" viewBox="0 0 16 16" version="1.1" width="12" class="bi bi-envelope-fill" fill="currentColor">
+                <path fill-rule="evenodd" d="M0 3.5A1.5 1.5 0 0 1 1.5 2h12A1.5 1.5 0 0 1 15 3.5v9a1.5 1.5 0 0 1-1.5 1.5H1.5A1.5 1.5 0 0 1 0 12.5v-9zm1.5-.8A1.5 1.5 0 0 1 3 1.5h10a1.5 1.5 0 0 1 1.5 1.7L8 8 1.5 3.7z"/>
+            </svg>
+            Gmail
+        </a>                        
+        <a href="https://github.com/shubhaaaaam" class="social-button github-button">
+            <svg height="12" aria-hidden="true" viewBox="0 0 16 16" version="1.1" width="12" class="octicon octicon-mark-github" fill="currentColor">
+                <path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.01.08-2.11 0 0 .67-.21 2.2.82A7.52 7.52 0 018 4.69c.68.01 1.36.09 2 .26 1.53-1.03 2.2-.82 2.2-.82.44 1.1.16 1.91.08 2.11.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.19 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/>
+            </svg>
+            GitHub
+        </a>        
+        <a href="https://wa.me/+916206033820" class="social-button whatsapp-button">
+            <svg height="12" aria-hidden="true" viewBox="0 0 16 16" version="1.1" width="12" class="bi bi-whatsapp" fill="currentColor">
+                <path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 4.42 3.58 8 8 8 1.96 0 3.78-.7 5.19-1.88l2.37.61-.68-2.58.17-.26c.39-.61.61-1.33.61-2.08 0-2.94-2.39-5.33-5.33-5.33zm0 9.67c-.14 0-.27-.01-.4-.03-.57.31-1.22.47-1.9.47-2.82 0-5.1-2.28-5.1-5.1 0-.68.16-1.33.47-1.9a5.055 5.055 0 0 1-1.38-3.5C.09 2.62 2.71.99 5.65.99c3.14 0 5.69 2.55 5.69 5.69 0 2.94-2.4 5.33-5.34 5.33z"/>
+            </svg>
+            WhatsApp
+        </a>
+        <a href="https://facebook.com/shubham.saha.984" class="social-button facebook-button">
+            <svg height="12" aria-hidden="true" viewBox="0 0 16 16" version="1.1" width="12" class="bi bi-facebook" fill="currentColor">
+                <path fill-rule="evenodd" d="M16 8.002C16 3.581 12.418 0 8 0S0 3.581 0 8.002c0 3.928 2.865 7.177 6.604 7.858v-5.552H4.659V8.002H6.63V6.348c0-2.605 1.55-4.043 3.923-4.043 1.137 0 2.348.203 2.348.203v2.58h-1.32c-1.3 0-1.705.806-1.705 1.635v1.964h2.898l-.463 2.908H8.003V15.86C13.135 15.18 16 11.93 16 8.002z"/>
+            </svg>
+            Facebook
+        </a>
+        <a href="https://www.codechef.com/users/shubham_400" class="social-button codechef-button">
+            <svg height="12" aria-hidden="true" viewBox="0 0 16 16" version="1.1" width="12" class="bi bi-code-square" fill="currentColor">
+                <path fill-rule="evenodd" d="M1 2a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1H1zm3.146 7.646a.5.5 0 0 1 0-.707L6.293 7 4.146 4.854a.5.5 0 1 1 .708-.708l2.5 2.5a.5.5 0 0 1 0 .708l-2.5 2.5a.5.5 0 0 1-.708 0zm7.708 0a.5.5 0 0 1 0-.707L9.707 7l2.147-2.146a.5.5 0 1 1 .708-.708l2.5 2.5a.5.5 0 0 1 0 .708l-2.5 2.5a.5.5 0 0 1-.708 0z"/>
+            </svg>
+            CodeChef
+        </a>
+        </div>               
+    </section>
+
+    <footer>
+        <p>&copy; 2024: Shubham</p>
+    </footer>
+
+    <script>
+        const themeToggle = document.getElementById('theme-toggle');
+        themeToggle.addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+            document.querySelector('header').classList.toggle('dark-mode');
+            document.querySelector('footer').classList.toggle('dark-mode');
+            document.querySelectorAll('nav ul li a').forEach(link => link.classList.toggle('dark-mode'));
+            themeToggle.classList.toggle('dark-mode');
+        });
+    </script>
+</body>
+</html>
